@@ -7,6 +7,7 @@ function highlight(message){
 
 const Discord = require('discord.js');
 const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_MESSAGE_REACTIONS"] });
+const token = require('./loginToken');
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -56,4 +57,4 @@ client.on('messageCreate', msg => {
   }
 });
 
-client.login('NDYxMjAzMDU3MTMzMzU1MDQ4.GhhVpX.7i2MeZcjNGHyxKJ1zjpq0BSswiH5nfKlpXSbDE');
+client.login(token);
